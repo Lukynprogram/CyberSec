@@ -41,6 +41,9 @@ def search():
         time.sleep(2)
         shodanip = f'https://www.shodan.io/host/{ipaddress}'
         webbrowser.get(chrome_path).open(shodanip)
+        time.sleep(2)
+        cisco = f'https://talosintelligence.com/reputation_center/lookup?search={ipaddress}'
+        webbrowser.get(chrome_path).open(cisco)
 
     elif rozhodnuti == 2:
         domain = input("Vloz domenu kterou chces vyhledat: ")
@@ -67,6 +70,9 @@ def search():
         time.sleep(2) 
         shodand = f'https://www.shodan.io/search?query={domain}'
         webbrowser.get(chrome_path).open(shodand)
+        time.sleep(2)
+        cisco = f'https://talosintelligence.com/reputation_center/lookup?search={domain}'
+        webbrowser.get(chrome_path).open(cisco)
         
     else:
         print("Zadal jsi mimo rozsah... Zkus to znovu... \n")
